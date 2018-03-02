@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">U·Wallpaper</string>
+    <string name="title_latest">最新</string>
+    <string name="title_random">随机</string>
+    <string name="txt_download_wait">下载中，请稍后！</string>
+    <string name="txt_download_succ">下载成功!</string>
+    <string name="txt_getfullpic_wait">正在获取高清大图，请稍后！</string>
+    <string name="txt_setwallpaper_succ">设置成功</string>
+    <string name="txt_cancel">取消</string>
+    <string name="no_more1">已经加载了</string>
+    <string name="no_more2">张，没有更多了!</string>
+
+</resources>

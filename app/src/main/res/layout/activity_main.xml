@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivision"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:id="@+id/ll_viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:gravity="center">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout xmlns:tab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/viewpagertab"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            tab:stl_clickable="true"
+            tab:stl_defaultTabBackground="@android:color/transparent"
+            tab:stl_defaultTabTextAllCaps="false"
+            tab:stl_defaultTabTextColor="@color/tab_text_selector"
+            tab:stl_defaultTabTextHorizontalPadding="12dp"
+            tab:stl_defaultTabTextMinWidth="0dp"
+            tab:stl_defaultTabTextSize="14dp"
+            tab:stl_distributeEvenly="false"
+            tab:stl_dividerColor="#00000000"
+            tab:stl_dividerThickness="0dp"
+            tab:stl_drawDecorationAfterTab="false"
+            tab:stl_indicatorColor="#ff5c5c"
+            tab:stl_indicatorCornerRadius="0dp"
+            tab:stl_indicatorGravity="bottom"
+            tab:stl_indicatorInFront="false"
+            tab:stl_indicatorInterpolation="smart"
+            tab:stl_indicatorThickness="2dp"
+            tab:stl_indicatorWidth="auto"
+            tab:stl_indicatorWithoutPadding="false"
+            tab:stl_overlineColor="#4D000000"
+            tab:stl_overlineThickness="0dp"
+            tab:stl_underlineColor="#00000000"
+            tab:stl_underlineThickness="1dp" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_viewpagertab" />
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.jloveh.uwallpaper"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //多渠道打包
+    productFlavors {
+        relea { buildConfigField "String", "KEY", "\"relea\"" }
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [CHANNEL_NAME: (buildConfigFields["KEY"].value)]
+    }
+    buildTypes {
+        //对不同渠道的进行区分
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"//debug模式使用JLog
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"//release模式不使用JLog
+            //minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "U·Wallpaper_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                        outputFileName = fileName
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+buildscript {
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url 'https://dl.bintray.com/hpdx/maven/' }
+            maven { url 'https://jitpack.io' }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //butterknife依赖注入 https://github.com/JakeWharton/butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //下拉刷新上拉加载  https://github.com/scwang90/SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+
+    //design
+    implementation 'com.android.support:design:27.0.1'
+
+    //cardview  https://github.com/dandar3/android-support-v7-cardview
+    implementation 'com.android.support:cardview-v7:27.0.1'
+
+    //AndroidUtilCode https://github.com/hoangkien0705/Android-UtilCode
+    implementation 'com.blankj:utilcode:1.12.6'
+
+    //Jlog日志打印 https://github.com/zhoujia456888/JLog
+    implementation 'com.jloveh:jlog:1.0.0'
+
+    //gson https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    //unsplash https://github.com/KeenenCharles/AndroidUnplash
+    implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
+
+    //标题Tab https://github.com/ogaclejapan/SmartTabLayout
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //图片加载 https://github.com/hpdx/fresco-helper
+    implementation 'com.facebook.fresco.helper:fresco-helper:2.0.4'
+
+    //material-dialogs   https://github.com/afollestad/material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    //永不crash https://github.com/android-notes/Cockroach
+    implementation 'com.wanjian:cockroach:0.0.5'
+
+
+}
