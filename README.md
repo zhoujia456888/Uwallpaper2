@@ -10,14 +10,15 @@
 * 下载和设置壁纸是用的高清大图哦，所以可能下载会比较慢一点，耐心等待即可。
 
 ## 截图
-![screenshots1](https://github.com/zhoujia456888/JLog/blob/master/20171013-125329.png "screenshots1")
+<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114848.png" alt="Drawing" width="250px" />
+<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114906.png" alt="Drawing" width="250px" />
+<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114920.png" alt="Drawing" width="250px" />
 
 
 ## 下载
 
-```
-[地址](https://github.com/zhoujia456888/Uwallpaper2/relea/release/U·Wallpaper_v1.0_relea.apk)
-```
+
+[apk地址](https://github.com/zhoujia456888/Uwallpaper2/relea/release/U·Wallpaper_v1.0_relea.apk)
 
 
 ## 反馈
