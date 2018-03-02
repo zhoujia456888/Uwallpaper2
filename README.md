@@ -10,8 +10,7 @@
 * 下载和设置壁纸是用的高清大图哦，所以可能下载会比较慢一点，耐心等待即可。
 
 ## 截图
-<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114848.png" alt="Drawing" width="250px" />
-<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114906.png" alt="Drawing" width="250px" />
+<img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114848.png" alt="Drawing" width="250px" /><img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114906.png" alt="Drawing" width="250px" />
 <img src="https://github.com/zhoujia456888/Uwallpaper2/blob/master/device-2018-03-02-114920.png" alt="Drawing" width="250px" />
 
 
@@ -37,20 +36,3 @@
 * [material-dialogs](https://github.com/afollestad/material-dialogs)
 * [Cockroach](https://github.com/android-notes/Cockroach)
 
-
-## 许可证（装逼无用忽视即可）
-```
-Copyright 2016-2017 zhoujia456888
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-```
