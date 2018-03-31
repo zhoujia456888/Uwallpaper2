@@ -26,7 +26,7 @@
 * [butterknife](https://github.com/JakeWharton/butterknife)  
 * [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
 * [cardview](https://github.com/dandar3/android-support-v7-cardview)
-* [AndroidUtilCode](https://github.com/hoangkien0705/Android-UtilCode)
+* [AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)
 * [Jlog](https://github.com/zhoujia456888/JLog)
 * [gson](https://github.com/google/gson)
 * [unsplash](https://github.com/KeenenCharles/AndroidUnplash)
