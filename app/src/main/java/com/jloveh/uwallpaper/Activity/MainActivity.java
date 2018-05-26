@@ -3,6 +3,8 @@ package com.jloveh.uwallpaper.Activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.jloveh.jlog.JLog;
 import com.jloveh.uwallpaper.Fragment.LatestPicFragment;
@@ -45,7 +47,6 @@ public class MainActivity extends BaseActivity {
         viewpagertab.setViewPager(viewpager);
 
 
-
         viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -67,8 +68,22 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    private long exitTime = 0;
 
-
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "再按一次退出程序",
+                        Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }
